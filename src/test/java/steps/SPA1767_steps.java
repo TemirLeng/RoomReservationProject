@@ -6,7 +6,7 @@ import cucumber.api.java.en.When;
 
 import java.util.List;
 
-public class SPA1767stepDef {
+public class SPA1767_steps {
     @Given("user is on the home page")
     public void user_is_on_the_home_page() {
 

@@ -5,7 +5,7 @@ import cucumber.api.java.en.Then;
 
 import java.util.List;
 
-public class SPA1768stepDef {
+public class SPA1768_steps {
     @Given("user signs in")
     public void user_signs_in() {
 
