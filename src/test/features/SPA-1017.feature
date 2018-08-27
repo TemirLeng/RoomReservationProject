@@ -1,5 +1,5 @@
-@Sec
 Feature: Verify Information
+  @SPA1017
   Scenario: Verify informations in myself page
     Given the user is on the sign in page
     When the user sign in using email "htwinbrowb4@blogspot.com" and password "kanyabang"

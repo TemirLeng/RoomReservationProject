@@ -11,14 +11,17 @@ public class SchedulePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//div[@class='card is-transparent']/table//tr[12]//td[6]")
+    @FindBy(xpath = "//table[@class='card table is-fullwidth is-transparent borderless']//td[@class='conference ng-star-inserted']")
     public WebElement reservationPart;
 
-    @FindBy(xpath = "((//div[@class='media-content'])[4]//p)[1]")
+    @FindBy(xpath = "//div[@class='media-content']//p[contains(text(),'reservator')]//preceding-sibling::p")
     public WebElement name;
 
-    @FindBy(xpath = "((//div[@class='media-content'])[5]//p)[1]")
+    @FindBy(xpath = "//div[@class='media-content']//p[contains(text(),'date')]//preceding-sibling::p")
     public WebElement date;
+
+    @FindBy(xpath = "//button[@class='button is-danger']")
+    public WebElement cancelConferenceBtn;
 
 
 }
