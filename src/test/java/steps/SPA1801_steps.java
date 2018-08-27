@@ -6,10 +6,6 @@ import cucumber.api.java.en.When;
 
 public class SPA1801_steps {
 
-    @Given("{string} is on the sign in page")
-    public void is_on_the_sign_in_page(String user) {
-
-    }
 
     @When("{string} should be able to sign in using valid {string} and {string}")
     public void should_be_able_to_sign_in_using_valid_and(String user, String email, String password) {

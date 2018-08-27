@@ -1,14 +1,35 @@
 package steps;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-import org.junit.runner.RunWith;
+import cucumber.api.Scenario;
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import utilities.Driver;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-        features="src/test/features",
-        glue="java/steps",
-        dryRun=false
-)
+import java.util.concurrent.TimeUnit;
+
+
 public class Hooks {
+
+    @Before
+    public void setUp() {
+       Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+    }
+
+
+    @After
+    public void tearDown(Scenario scenario) {
+        // only takes a screenshot if the scenario fails
+        if (scenario.isFailed()) {
+            // taking a screenshot
+            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            // adding the screenshot to the report
+            scenario.embed(screenshot, "image/png");
+        }
+
+        Driver.closeDriver();
+    }
+
 }
