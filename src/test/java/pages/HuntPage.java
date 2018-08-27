@@ -25,6 +25,9 @@ public class HuntPage {
 
     @FindBy(xpath = "(//button[@type='submit'])[5]")
     public WebElement amazon;
+    
+    @FindBy(xpath = "(//div[@class='card-footer-item'])[3]")
+    public WebElement microsoft;
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement confirm;
