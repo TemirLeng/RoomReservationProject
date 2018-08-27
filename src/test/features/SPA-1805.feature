@@ -2,13 +2,12 @@
 Feature: Smoke Test
 
  Scenario: Smoke test for login to make reservation
- 
-	Given user is on the login page
-	Given user login using email "teacherilsamnickel@gmail.com" and password "samnickel"
-	And user clicks on the sign in button
-	When user clicks on hunt to make reservation
-	And user chooses "8/31" as the desired date and from hour "9:00PM" till "10:00PM"
-	Then user clicks on book for microsoft room
-	Then booking confirmation page displayed 
-	And user clicks on confirm button to reserve the room
-	And user "conference in microsoft has been successfully scheduled"
+
+	 Given user is on the sign in page
+	 When user sign in using email "teacherilsamnickel@gmail.com" and password "samnickel"
+	 When user clicks on hunt to make reservation
+	 Then user chooses desired date "08/31" and time from "9:00pm" to "10:00pm" then clicks search button
+	 Then user clicks on book for microsoft room
+	 Then booking confirmation page displayed
+	 And user clicks on confirm button to reserve the room
+	 And user "conference in microsoft has been successfully scheduled"
