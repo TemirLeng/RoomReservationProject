@@ -23,5 +23,8 @@ public class SchedulePage {
     @FindBy(xpath = "//button[@class='button is-danger']")
     public WebElement cancelConferenceBtn;
 
+    @FindBy(xpath = "//div[@class='container']//h1")
+    public WebElement scheduleTxt;
+
 
 }
