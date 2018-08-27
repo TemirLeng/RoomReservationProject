@@ -15,17 +15,19 @@ import utilities.DBUtils;
 import utilities.Driver;
 
 public class SPA1016_steps {
+
     Homepage hp=new Homepage();
     SignInPage s=new SignInPage();
     HuntPage h=new HuntPage();
     SchedulePage sp=new SchedulePage();
+
     @Given("the user is on the sign in page")
     public void the_user_is_on_the_sign_in_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }
 
-    @When("the user sign in using email {string} and password {string}")
+    @When("the user sign in using email (\\*) and password (\\w+)")
     public void the_user_sign_in_using_email_and_password(String userName, String password) {
         hp.userName.sendKeys(userName);
         hp.password.sendKeys(password);
@@ -38,7 +40,7 @@ public class SPA1016_steps {
         s.Hunt.click();
     }
 
-    @Then("user chooses desired date {string} and time from {string} to {string} then clicks search button")
+    @Then("user chooses desired date (\\*) and time from (\\*) to (\\*) then clicks search button")
     public void user_chooses_desired_date_and_time_from_to_then_clicks_search_button(String date, String fromHour, String toHour) {
         BrowserUtils.waitFor(1);
         h.date.sendKeys(date);
@@ -52,7 +54,7 @@ public class SPA1016_steps {
 
     }
 
-    @Then("user clicks on book to reserve for {string} room")
+    @Then("user clicks on book to reserve for  room")
     public void user_clicks_on_book_to_reserve_for_room(String string) {
         BrowserUtils.waitFor(2);
             h.amazon.click();
@@ -63,7 +65,7 @@ public class SPA1016_steps {
             h.confirm.click();
     }
 
-    @Then("user's info should match database with name {string} and date {string} on schedule page" )
+    @Then("user's info should match database with name (\\*) and date (\\*) on schedule page" )
     public void user_s_info_should_match_database_with_name_and_date(String name, String date) {
             BrowserUtils.waitFor(2);
             sp.reservationPart.click();

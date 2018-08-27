@@ -2,13 +2,15 @@ package steps;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import utilities.ConfigurationReader;
+import utilities.Driver;
 
 import java.util.List;
 
 public class SPA1768_steps {
     @Given("user signs in")
     public void user_signs_in() {
-
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
     @Then("user should be able to see links:")
