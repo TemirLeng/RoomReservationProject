@@ -31,21 +31,21 @@ public class SPA1805_steps {
 
 	@Given("user login using email {string} and password {string}")
 	public void user_login_using_email_and_password(String username, String password) {
-		hp.userName.sendKeys(username);
-		hp.password.sendKeys(password);
+		sip.userName.sendKeys(username);
+		sip.password.sendKeys(password);
 	    
 	}
 
 	@Given("user clicks on the sign in button")
 	public void user_clicks_on_the_sign_in_button() {
-		hp.signInButton.click();
+		sip.signInButton.click();
 	    
 	}
 
 	@When("user clicks on hunt to make reservation")
 	public void user_clicks_on_hunt_to_make_reservation() {
 		BrowserUtils.waitFor(2);
-	    sip.Hunt.click();
+	    hp.huntLink.click();
 	}
 
 	@When("user chooses {string} as the desired date and from hour {string} till {string}")
