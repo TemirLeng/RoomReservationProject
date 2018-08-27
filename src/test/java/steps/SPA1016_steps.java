@@ -29,15 +29,15 @@ public class SPA1016_steps {
 
     @When("user sign in using email {string} and password {string}")
     public void user_sign_in_using_email_and_password(String userName, String password) {
-        homeP.userName.sendKeys(userName);
-        homeP.password.sendKeys(password);
-        homeP.signInButton.click();
+        signInP.userName.sendKeys(userName);
+        signInP.password.sendKeys(password);
+        signInP.signInButton.click();
     }
 
     @When("user clicks on hunt to make reservation")
     public void user_clicks_on_hunt_to_make_reservation() {
         BrowserUtils.waitFor(2);
-        signInP.Hunt.click();
+        homeP.huntLink.click();
     }
 
     @Then("user chooses desired date {string} and time from {string} to {string} then clicks search button")
