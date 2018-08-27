@@ -31,4 +31,7 @@ public class Homepage {
 
     @FindBy(linkText = "sign out")
     public WebElement signOut;
+
+    @FindBy(xpath = "//div[@class='container']//h1")
+    public WebElement location;
 }
