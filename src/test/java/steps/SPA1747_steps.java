@@ -2,13 +2,13 @@ package steps;
 
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
-import pages.Homepage;
+import pages.HomePage;
 import utilities.BrowserUtils;
 import utilities.DBUtils;
 
 public class SPA1747_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
 
     @Then("verify {string} is displayed in home page")
     public void verify_is_displayed_in_home_page(String location) {

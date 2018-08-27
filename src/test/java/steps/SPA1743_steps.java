@@ -6,7 +6,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import pages.Homepage;
+import pages.HomePage;
 import pages.SignInPage;
 import pages.TeamPage;
 import utilities.BrowserUtils;
@@ -19,7 +19,7 @@ import java.util.List;
 
 public class SPA1743_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
     TeamPage teamP = new TeamPage();
     SignInPage signP = new SignInPage();
 
