@@ -1,3 +1,4 @@
+@smoke
 Feature: Verify IL page
   @SPA1747
   Scenario: Use should verify that he is on IL page

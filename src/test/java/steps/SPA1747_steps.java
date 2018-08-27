@@ -5,6 +5,7 @@ import org.junit.Assert;
 import pages.HomePage;
 import utilities.BrowserUtils;
 import utilities.DBUtils;
+import utilities.Driver;
 
 public class SPA1747_steps {
 
@@ -26,5 +27,6 @@ public class SPA1747_steps {
         Assert.assertEquals("User in different page", locationFromUI, locationFromDB);
 
         DBUtils.destroy();
+        Driver.closeDriver();
     }
 }

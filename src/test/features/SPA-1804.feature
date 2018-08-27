@@ -1,5 +1,5 @@
+@smoke @SPA1804
 Feature: Verify Information
-  @SPA1017
   Scenario: Verify informations in myself page
     Given user is on the sign in page
     When user sign in using email "htwinbrowb4@blogspot.com" and password "kanyabang"

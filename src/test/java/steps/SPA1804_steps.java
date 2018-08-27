@@ -50,5 +50,8 @@ public class SPA1804_steps {
         Assert.assertEquals(list.get("team"),DBUtils.getColumnData(query,"team").get(0).toString());
         Assert.assertEquals(list.get("batch"),DBUtils.getColumnData(query,"batch_number").get(0).toString());
         Assert.assertEquals(list.get("campus"),DBUtils.getColumnData(query,"location").get(0).toString());
+        
+        DBUtils.destroy();
+        Driver.closeDriver();
     }
 }

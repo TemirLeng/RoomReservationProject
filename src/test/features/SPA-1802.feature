@@ -1,7 +1,5 @@
 @SPA-1802 @SPA-1741
-Feature:
-
-  User reserves a room
+Feature: User reserves a room
 
   Scenario Outline:
 

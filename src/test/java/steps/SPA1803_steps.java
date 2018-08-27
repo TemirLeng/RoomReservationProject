@@ -97,6 +97,7 @@ public class SPA1803_steps {
 
         // Killing the connection with DB
         DBUtils.destroy();
+        Driver.closeDriver();
     }
 
 }
