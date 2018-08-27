@@ -11,6 +11,17 @@ public class SignInPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(linkText = "hunt")
-    public WebElement Hunt;
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement userName;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public  WebElement signInButton;
+    
+    @FindBy(xpath = "//div[@class='cdk-live-announcer-element cdk-visually-hidden']")
+    public WebElement message;
+
+
 }
