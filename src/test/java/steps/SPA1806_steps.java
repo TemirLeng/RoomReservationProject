@@ -12,8 +12,8 @@ public class SPA1806_steps {
 	SignInPage sp = new SignInPage();
 	Homepage hm = new Homepage();
 	
-	@When("user enters correct email {string} and {string}")
-	public void user_enters_correct_email_and(String username, String password) {
+	@When("user enters email {string} and {string}")
+	public void user_enters_email_and(String username, String password) {
 	    sp.userName.sendKeys(username);
 	    sp.password.sendKeys(password);
 	    sp.signInButton.click();

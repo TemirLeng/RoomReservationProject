@@ -19,6 +19,9 @@ public class SignInPage {
 
     @FindBy(xpath = "//button[@type='submit']")
     public  WebElement signInButton;
+    
+    @FindBy(xpath = "//div[@class='cdk-live-announcer-element cdk-visually-hidden']")
+    public WebElement message;
 
 
 }
