@@ -3,7 +3,7 @@ Feature: Postive Login Functionality
 
 Scenario Outline: user is able to login with correct credentials 
 Given user is on the sign in page
-When user enters correct email "<username>" and "<password>"
+When user enters email "<username>" and "<password>"
 And verify "<location>" IL is displayed
 
 Examples:
