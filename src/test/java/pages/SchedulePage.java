@@ -26,6 +26,12 @@ public class SchedulePage {
 
     @FindBy(xpath = "//div[@class='container']//h1")
     public WebElement scheduleTxt;
+    
+    @FindBy(xpath = "//div[@class='cdk-live-announcer-element cdk-visually-hidden']")
+    public WebElement confirmationMessage;
+    
+    @FindBy(xpath = "//tbody//td[@class='conference ng-star-inserted']")
+    public WebElement deleteBooking;
 
 
 }
