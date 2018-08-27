@@ -1,5 +1,6 @@
 Feature: Verify IL page
+  @SPA1747
   Scenario: Use should verify that he is on IL page
     Given user is on the sign in page
-    Then user sign in using email "teacherilsamnickel@gmail.com" and password "samnickel"
-    And verify "IL" is displayed
+    When user sign in using email "teacherilsamnickel@gmail.com" and password "samnickel"
+    Then verify "IL" is displayed in home page
