@@ -23,8 +23,7 @@ public class SPA1767_steps {
         // For automatic transformation, change DataTable to one of
         // List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
         // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte Short, Long, BigInteger or BigDecimal.
-        //
+        // Double, Byte Short, Long, BigInteger or BigDecimal
         // For other transformations you can register a DataTableType.
 
     }

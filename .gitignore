@@ -14,8 +14,14 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+<<<<<<< HEAD
 target/
 .idea/vcs.xml
+=======
+*/target/*
+.idea/vcs.xml
+target/
+>>>>>>> darina
 
 # External tool builders
 .externalToolBuilders/
