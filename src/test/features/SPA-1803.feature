@@ -1,9 +1,9 @@
 Feature: Make reservation
   @SPA1016
   Scenario: Make reservation and check with database
-    Given the user is on the sign in page
-    When the user sign in using email "htwinbrowb4@blogspot.com" and password "kanyabang"
-    When the user clicks on hunt to make reservation
+    Given user is on the sign in page
+    When user sign in using email "htwinbrowb4@blogspot.com" and password "kanyabang"
+    When user clicks on hunt to make reservation
     Then user chooses desired date "08/30" and time from "7:00am" to "8:00am" then clicks search button
     Then user clicks on book to reserve for "amazon" room
     And user clicks on confirm button to reserve the room

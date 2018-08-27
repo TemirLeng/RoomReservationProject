@@ -11,19 +11,27 @@ public class Homepage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//input[@name='email']")
-    public WebElement userName;
+    @FindBy(linkText = "hunt")
+    public WebElement huntLink;
 
-    @FindBy(xpath = "//input[@name='password']")
-    public WebElement password;
+    @FindBy(linkText = "map")
+    public WebElement mapLink;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public  WebElement signInButton;
+    @FindBy(linkText = "schedule")
+    public WebElement scheduleLink;
 
-    @FindBy(xpath = "//a[@class='navbar-link']")
+    @FindBy(linkText = "my")
     public WebElement my;
 
-    @FindBy(xpath = "//a[@routerlink='/me']")
+    @FindBy(linkText = "self")
     public WebElement self;
 
+    @FindBy(linkText = "team")
+    public WebElement team;
+
+    @FindBy(linkText = "sign out")
+    public WebElement signOut;
+
+    @FindBy(xpath = "//div[@class='container']//h1")
+    public WebElement location;
 }
