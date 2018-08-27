@@ -21,21 +21,21 @@ public class SPA1016_steps {
     HuntPage huntP = new HuntPage();
     SchedulePage scheduleP = new SchedulePage();
 
-    @Given("the user is on the sign in page")
-    public void the_user_is_on_the_sign_in_page() {
+    @Given("user is on the sign in page")
+    public void user_is_on_the_sign_in_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }
 
-    @When("the user sign in using email {string} and password {string}")
-    public void the_user_sign_in_using_email_and_password(String userName, String password) {
+    @When("user sign in using email {string} and password {string}")
+    public void user_sign_in_using_email_and_password(String userName, String password) {
         homeP.userName.sendKeys(userName);
         homeP.password.sendKeys(password);
         homeP.signInButton.click();
     }
 
-    @When("the user clicks on hunt to make reservation")
-    public void the_user_clicks_on_hunt_to_make_reservation() {
+    @When("user clicks on hunt to make reservation")
+    public void user_clicks_on_hunt_to_make_reservation() {
         BrowserUtils.waitFor(2);
         signInP.Hunt.click();
     }
