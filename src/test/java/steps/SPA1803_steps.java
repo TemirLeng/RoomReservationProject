@@ -14,7 +14,7 @@ import utilities.ConfigurationReader;
 import utilities.DBUtils;
 import utilities.Driver;
 
-public class SPA1016_steps {
+public class SPA1803_steps {
 
     Homepage homeP = new Homepage();
     SignInPage signInP = new SignInPage();
