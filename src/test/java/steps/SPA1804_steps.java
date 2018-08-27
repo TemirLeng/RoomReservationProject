@@ -3,7 +3,7 @@ package steps;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-import pages.Homepage;
+import pages.HomePage;
 import utilities.BrowserUtils;
 import utilities.DBUtils;
 import utilities.Driver;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class SPA1804_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
 
     @Then("user click on myself button")
     public void user_click_on_myself_button() {

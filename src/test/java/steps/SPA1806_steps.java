@@ -3,14 +3,14 @@ package steps;
 import static org.testng.Assert.assertEquals;
 
 import cucumber.api.java.en.When;
-import pages.Homepage;
+import pages.HomePage;
 import pages.SignInPage;
 import utilities.BrowserUtils;
 
 public class SPA1806_steps {
 	
 	SignInPage sp = new SignInPage();
-	Homepage hm = new Homepage();
+	HomePage hm = new HomePage();
 	
 	@When("user enters email {string} and {string}")
 	public void user_enters_email_and(String username, String password) {

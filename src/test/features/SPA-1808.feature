@@ -12,5 +12,4 @@ Examples:
 |htwinbrowb4@blogspot.com     |Kanyabang         | 
 |dfrederickb5@yellowbook.com  |Engraciahuc       | 
 |apainb6@google.co.jp         |Rosettalightollers| 
-|afbawmeb7@studiopress.com    |Sherilyngohn      |
-|teacherilsamnickel@gmail.com |Samnickel         |
+|teacherilsamnickel@gmail.com |Samnickel         | 

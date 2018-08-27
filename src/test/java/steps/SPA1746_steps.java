@@ -3,13 +3,13 @@ package steps;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import pages.Homepage;
+import pages.HomePage;
 import pages.HuntPage;
 import utilities.BrowserUtils;
 
 public class SPA1746_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
     HuntPage huntP = new HuntPage();
 
     @Then("verify {string} is displayed")
