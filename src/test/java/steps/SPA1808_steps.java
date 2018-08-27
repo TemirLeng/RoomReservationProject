@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import cucumber.api.java.en.Then;
 import pages.SignInPage;
+import utilities.BrowserUtils;
 import utilities.Driver;
 
 public class SPA1808_steps {
@@ -15,7 +16,7 @@ public class SPA1808_steps {
 	
 	@Then("verify message {string} is displayed")
 	public void verify_message_is_displayed(String message) {
-		
+		BrowserUtils.waitFor(2);
 		JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
 		js.executeScript("arguments[0].click();" , sp.message);
 		assertEquals(sp.message.getText(), message ,"message did not match" );

@@ -5,7 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
-import pages.Homepage;
+import pages.HomePage;
 import pages.HuntPage;
 import pages.SchedulePage;
 import pages.SignInPage;
@@ -16,7 +16,7 @@ import utilities.Driver;
 
 public class SPA1803_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
     SignInPage signInP = new SignInPage();
     HuntPage huntP = new HuntPage();
     SchedulePage scheduleP = new SchedulePage();
@@ -97,6 +97,7 @@ public class SPA1803_steps {
 
         // Killing the connection with DB
         DBUtils.destroy();
+        Driver.closeDriver();
     }
 
 }

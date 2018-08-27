@@ -3,7 +3,7 @@ package steps;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-import pages.Homepage;
+import pages.HomePage;
 import utilities.BrowserUtils;
 import utilities.DBUtils;
 import utilities.Driver;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class SPA1804_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
 
     @Then("user click on myself button")
     public void user_click_on_myself_button() {
@@ -50,5 +50,8 @@ public class SPA1804_steps {
         Assert.assertEquals(list.get("team"),DBUtils.getColumnData(query,"team").get(0).toString());
         Assert.assertEquals(list.get("batch"),DBUtils.getColumnData(query,"batch_number").get(0).toString());
         Assert.assertEquals(list.get("campus"),DBUtils.getColumnData(query,"location").get(0).toString());
+        
+        DBUtils.destroy();
+        Driver.closeDriver();
     }
 }

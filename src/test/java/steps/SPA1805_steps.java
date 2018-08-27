@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.Homepage;
+import pages.HomePage;
 import pages.HuntPage;
 import pages.SchedulePage;
 import pages.SignInPage;
@@ -19,7 +19,7 @@ import utilities.Driver;
 public class SPA1805_steps {
 	
 	SignInPage sip = new SignInPage();
-	Homepage hp = new Homepage();
+	HomePage hp = new HomePage();
 	HuntPage hntP = new HuntPage();
 	SchedulePage sp = new SchedulePage();
 	

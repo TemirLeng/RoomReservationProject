@@ -2,7 +2,7 @@ package steps;
 
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
-import pages.Homepage;
+import pages.HomePage;
 import pages.SchedulePage;
 import utilities.BrowserUtils;
 
@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class SPA1748_steps {
 
-    Homepage homeP = new Homepage();
+    HomePage homeP = new HomePage();
     SchedulePage scheduleP = new SchedulePage();
 
     @Then("user clicks on the schedule link")
