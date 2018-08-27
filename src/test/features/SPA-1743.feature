@@ -1,6 +1,4 @@
-Feature:
-
-	#Verify group members in team page
+Feature: Verify group members in team page
   @SPA-1743 @SPA-1741
   Scenario Outline: Group members
     Given "<user>" is on the sign in page

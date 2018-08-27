@@ -78,7 +78,7 @@ public class SPA1743_steps {
             Assert.assertTrue(output.contains(DBUtils.getQueryResultMap(query).get(3).get("firstname_and_lastname").toString()));
         }
 
-
+Driver.closeDriver();
 
     }
 }
