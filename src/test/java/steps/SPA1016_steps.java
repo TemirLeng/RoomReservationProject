@@ -44,10 +44,10 @@ public class SPA1016_steps {
         h.date.sendKeys(date);
         BrowserUtils.waitFor(2);
         Select s=new Select(h.fromHour);
-        s.selectByIndex(11);
+        s.selectByVisibleText(fromHour);
         BrowserUtils.waitFor(2);
         s=new Select(h.toHour);
-        s.selectByIndex(3);
+        s.selectByVisibleText(toHour);
         h.search.click();
 
     }
@@ -65,21 +65,32 @@ public class SPA1016_steps {
 
     @Then("user's info should match database with name {string} and date {string} on schedule page" )
     public void user_s_info_should_match_database_with_name_and_date(String name, String date) {
-            BrowserUtils.waitFor(2);
-            sp.reservationPart.click();
-            DBUtils.createConnection();
-        String query= "select users.firstname||' '||users.lastname as firstname_and_lastname,conference.date from users\n" +
-                "join conference on users.id=conference.reservator_id where users.firstname='Kanya';";
-        System.out.println(DBUtils.getColumnData(query,"firstname_and_lastname").get(0).toString());
-        String dataBaseName=DBUtils.getColumnData(query, "firstname_and_lastname").get(0).toString();
-        String UI_name=sp.name.getText();
-        String UI_date=sp.date.getText();
+        BrowserUtils.waitFor(2);
 
-        String dataBaseDate=DBUtils.getColumnData(query,"date").get(0).toString().replace("-","/");
-        System.out.println(UI_date);
-        System.out.println(dataBaseDate.replace("2018/",""));
+        // clicking reserved time on room "amazon"
+        sp.reservationPart.click();
+
+        // create a connection with DataBase
+        DBUtils.createConnection();
+
+        // Getting the unique fullname and date from DataBase
+        String query= "select users.firstname||' '||users.lastname as firstname_and_lastname,conference.date from users " +
+                "join conference on users.id=conference.reservator_id " +
+                "where users.firstname='Kanya' and conference.date = '2018-" + date.replace("/","-") + "';";
+
+        // Getting the fullname and date from Database
+        String dataBaseName = DBUtils.getColumnData(query, "firstname_and_lastname").get(0).toString();
+        String dataBaseDate = DBUtils.getColumnData(query,"date").get(0).toString().replace("-","/");
+
+        // Getting the fullname and date from UI
+        String UI_name = sp.name.getText();
+        String UI_date = sp.date.getText();
+
+        // verifying fullname and date from UI with DataBase
         Assert.assertEquals(dataBaseName,UI_name);
         Assert.assertEquals(UI_date,dataBaseDate.replace("2018/0",""));
+
+        // Killing the connection with DB
         DBUtils.destroy();
     }
 
