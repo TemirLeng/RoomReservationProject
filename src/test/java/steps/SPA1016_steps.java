@@ -15,10 +15,12 @@ import utilities.DBUtils;
 import utilities.Driver;
 
 public class SPA1016_steps {
+
     Homepage hp=new Homepage();
     SignInPage s=new SignInPage();
     HuntPage h=new HuntPage();
     SchedulePage sp=new SchedulePage();
+
     @Given("the user is on the sign in page")
     public void the_user_is_on_the_sign_in_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
