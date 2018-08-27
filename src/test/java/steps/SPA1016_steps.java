@@ -90,6 +90,9 @@ public class SPA1016_steps {
         Assert.assertEquals(dataBaseName,UI_name);
         Assert.assertEquals(UI_date,dataBaseDate.replace("2018/0",""));
 
+        BrowserUtils.waitFor(1);
+        sp.cancelConferenceBtn.click();
+
         // Killing the connection with DB
         DBUtils.destroy();
     }
