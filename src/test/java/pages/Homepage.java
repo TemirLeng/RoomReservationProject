@@ -20,7 +20,7 @@ public class Homepage {
     @FindBy(linkText = "schedule")
     public WebElement scheduleLink;
 
-    @FindBy(linkText = "my")
+    @FindBy(xpath = "//a[@class='navbar-link']")
     public WebElement my;
 
     @FindBy(linkText = "self")
