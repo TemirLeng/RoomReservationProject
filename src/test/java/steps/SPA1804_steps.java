@@ -10,7 +10,7 @@ import utilities.Driver;
 
 import java.util.Map;
 
-public class SPA1017_steps {
+public class SPA1804_steps {
 
     Homepage homeP = new Homepage();
 
