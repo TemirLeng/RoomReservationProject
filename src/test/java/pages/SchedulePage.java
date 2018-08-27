@@ -20,5 +20,8 @@ public class SchedulePage {
     @FindBy(xpath = "//div[@class='media-content']//p[contains(text(),'date')]//preceding-sibling::p")
     public WebElement date;
 
+    @FindBy(xpath = "//button[@class='button is-danger']")
+    public WebElement cancelConferenceBtn;
+
 
 }
