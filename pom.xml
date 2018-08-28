@@ -88,7 +88,7 @@
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-sandwich</artifactId>
-            <version>3.19.0</version>
+            <version>3.15.0</version>
         </dependency>
 
     </dependencies>
