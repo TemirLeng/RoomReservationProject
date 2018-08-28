@@ -121,7 +121,7 @@
                         <configuration>
                             <projectName>CybertekRoomReservationAppProject</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
-                            <cucumberOutput>${project.build.directory}/target/report.json</cucumberOutput>
+                            <cucumberOutput>${project.build.directory}/target/cucumber.json</cucumberOutput>
                             <jsonFiles>
                                 <!-- supports wildcard or name pattern -->
                                 <param>**/*.json</param>
