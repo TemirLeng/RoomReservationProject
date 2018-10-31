@@ -1,5 +1,5 @@
 Feature: SPA-1769
-
+@SPA-1769
   Scenario: Reserve a Room
     Given user is on home page
     When user clicks on hunt page

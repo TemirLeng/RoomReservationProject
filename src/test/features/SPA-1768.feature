@@ -1,7 +1,7 @@
 Feature: SPA-1768
-
+@SPA-1768
   Scenario: Page Uploading
-    Given user signs in
+    When user signs in
     Then user should be able to see links:
       | map      |
       | schedule |

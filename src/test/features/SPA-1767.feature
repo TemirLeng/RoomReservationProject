@@ -1,5 +1,5 @@
 Feature: SPA_1767
-
+@SPA_1767
   Scenario: Hours Display
     Given user is on the home page
     When user clicks on schedule

@@ -1,5 +1,5 @@
 @SPA-1802 @SPA-1741
-Feature:
+Feature: Name of the feature and explanation
 
   User reserves a room
 

@@ -1,4 +1,4 @@
-Feature:
+Feature: Update feature naming
 
 	#Verify group members in team page
   @SPA-1743 @SPA-1741
